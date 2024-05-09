@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ProjectCard } from "./projectCard"
+import { ProjectCard } from "../global/projectCard"
 const projectList = [
     {
         name: "",

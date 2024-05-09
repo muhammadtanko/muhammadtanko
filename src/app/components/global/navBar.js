@@ -10,14 +10,14 @@ const navItem = [
         to: "/",
     },
     {
+        name: "projects",
+        to: "/projects",
+    },
+    {
         name: "about-me",
         to: "/about",
     },
     {
-        name: "works",
-        to: "/works",
-    }
-    , {
         name: "contacts",
         to: "/contact"
     }

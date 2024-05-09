@@ -38,9 +38,9 @@ export const Hero = () => {
             <div class="hidden md:flex justify-center items-center flex-col gap-8 absolute top-0 left-5">
                 <div class="h-[120px] w-[2px] bg-gray"></div>
                 <div class="flex flex-col justify-center items-center gap-8">
-                    <Link  href={"https://github.com/muhammadtanko"}> <DiGithubBadge className="w-6 h-6"/></Link>
-                    <Link  href={"https://twitter.com/teekay_014"}> <RiTwitterXLine className="w-6 h-6"/></Link>
-                    <Link  href={"https://www.linkedin.com/in/muhammad-yahaya-tanko-752814140/"}> <FaLinkedin className="w-6 h-6"/></Link>
+                    <Link href={"https://github.com/muhammadtanko"}> <DiGithubBadge className="w-6 h-6" /></Link>
+                    <Link href={"https://twitter.com/teekay_014"}> <RiTwitterXLine className="w-6 h-6" /></Link>
+                    <Link href={"https://www.linkedin.com/in/muhammad-yahaya-tanko-752814140/"}> <FaLinkedin className="w-6 h-6" /></Link>
                 </div>
             </div>
 
