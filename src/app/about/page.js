@@ -109,7 +109,7 @@ const AboutSection = ({ isVisible }) => {
                 <div className="relative">
                     <div className="relative group">
                         <Image
-                            src="/images/04p.png"
+                            src="/images/04P.png"
                             width={400}
                             height={500}
                             alt="Muhammad working"
