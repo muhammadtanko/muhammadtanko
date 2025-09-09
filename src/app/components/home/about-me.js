@@ -17,10 +17,10 @@ export const AboutMe = () => {
                         Hello, i'm Muhammad!
                     </p>
                     <div className="mb-5 max-w-lg">
-                        I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.
+                        A software engineer based that develops responsive websites from scratch and raise them into modern user-friendly web experiences.
                     </div>
                     <div className="max-w-lg">
-                        Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
+                        Transforming my creativity and knowledge into  software systems that solve problems has been my passion. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
                     </div>
                     <div className="mt-5">
                         <Link href={"/contact"}
@@ -31,7 +31,7 @@ export const AboutMe = () => {
                     </div>
                 </div>
                 <div className=" ">
-                    <Image className="-mt-10" src={"/images/about-me.png"} width={339} height={400} />
+                    <Image className="-mt-10" src={"/images/01M.png"} width={339} height={400} />
                 </div>
             </div>
 

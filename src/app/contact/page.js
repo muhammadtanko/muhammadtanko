@@ -7,7 +7,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 export default function ContactPage() {
     return (
-        <div className="md:h-dvh bg-bg-color px-[100px]">
+        <div className=" h-full bg-bg-color px-[100px]">
             <NavBar />
             <div className="text-white font-semibold text-3xl">
                 <span className="text-primary ">/</span> contacts
