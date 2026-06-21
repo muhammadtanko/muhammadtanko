@@ -80,13 +80,22 @@ export const Hero = () => {
                     He crafts responsive websites and scalable systems where technologies meet creativity
                 </div>
 
-                <Link
-                    href="/contact"
-                    className={`hidden md:inline-block text-center border-[#C778DD] border-2 p-3 px-6 w-fit text-white font-medium transition-all duration-300 hover:bg-[#C778DD] hover:bg-opacity-20 hover:scale-105 hover:shadow-lg hover:shadow-[#C778DD]/30 transform delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                        }`}
-                >
-                    Contact me!!
-                </Link>
+                <div className={`hidden md:flex gap-4 transform delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                    }`}>
+                    <Link
+                        href="/contact"
+                        className="text-center border-[#C778DD] border-2 p-3 px-6 w-fit text-white font-medium transition-all duration-300 hover:bg-[#C778DD] hover:bg-opacity-20 hover:scale-105 hover:shadow-lg hover:shadow-[#C778DD]/30"
+                    >
+                        Contact me!!
+                    </Link>
+                    <a
+                        href="/Muhammad_tanko_.pdf"
+                        download
+                        className="text-center border-[#ABB2BF] border-2 p-3 px-6 w-fit text-white font-medium transition-all duration-300 hover:border-[#C778DD] hover:bg-[#C778DD] hover:bg-opacity-10 hover:scale-105"
+                    >
+                        Download Resume
+                    </a>
+                </div>
             </div>
 
             {/* Hero Image Section */}

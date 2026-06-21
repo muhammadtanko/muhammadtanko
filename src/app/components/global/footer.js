@@ -35,7 +35,7 @@ export const Footer = () => {
             hoverColor: "hover:text-gray-300"
         },
         {
-            name: "Twitter",
+            name: "X",
             icon: RiTwitterXLine,
             href: "https://twitter.com/teekay_014",
             hoverColor: "hover:text-blue-400"
@@ -102,7 +102,7 @@ export const Footer = () => {
                                 <li key={link.name}>
                                     <Link
                                         href={link.href}
-                                        className={`text-[#ABB2BF] hover:text-[#C778DD] transition-all duration-300 hover:translate-x-2 inline-block transform delay-${index * 100}`}
+                                        className="text-[#ABB2BF] hover:text-[#C778DD] transition-all duration-300 hover:translate-x-2 inline-block transform"
                                     >
                                         → {link.name}
                                     </Link>

@@ -14,10 +14,10 @@ export const AboutMe = () => {
             <div className="flex flex-col md:flex-row justify-between">
                 <div className="text-gray font-normal text-base ">
                     <p className="mb-5">
-                        Hello, i'm Muhammad!
+                        Hello, I'm Muhammad!
                     </p>
                     <div className="mb-5 max-w-lg">
-                        A software engineer based that develops responsive websites from scratch and raise them into modern user-friendly web experiences.
+                        A software engineer based in Nigeria who develops responsive websites from scratch and turns them into modern, user-friendly web experiences.
                     </div>
                     <div className="max-w-lg">
                         Transforming my creativity and knowledge into  software systems that solve problems has been my passion. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.

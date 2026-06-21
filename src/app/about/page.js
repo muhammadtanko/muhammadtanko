@@ -3,8 +3,8 @@ import { NavBar } from "@comp/global/navBar";
 import { Footer } from "@comp/global/footer";
 import { useState, useEffect } from 'react';
 import Image from "next/image";
-import { FaCode, FaCoffee, FaGamepad, FaMusic, FaCamera, FaBook } from 'react-icons/fa';
-import { RiComputerLine, RiRocket2Line } from 'react-icons/ri';
+import { FaCode, FaCoffee, FaGamepad, FaMusic, FaCamera, FaBook, FaDatabase } from 'react-icons/fa';
+import { RiComputerLine, RiRocket2Line, RiCloudLine } from 'react-icons/ri';
 
 export default function AboutPage() {
     const [isVisible, setIsVisible] = useState(false);
@@ -131,21 +131,33 @@ const AboutSection = ({ isVisible }) => {
 const SkillsSection = ({ isVisible }) => {
     const skillCategories = [
         {
-            title: "Frontend",
+            title: "Languages",
+            icon: FaCode,
+            skills: ["JavaScript", "TypeScript"],
+            color: "text-yellow-400"
+        },
+        {
+            title: "Frontend & Mobile",
             icon: RiComputerLine,
-            skills: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS"],
+            skills: ["React", "Next.js", "Tailwind CSS"],
             color: "text-blue-400"
         },
         {
             title: "Backend",
             icon: RiRocket2Line,
-            skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Redis", "GraphQL"],
+            skills: ["Node.js", "Express", "GraphQL", "Prisma"],
             color: "text-green-400"
         },
         {
-            title: "Tools & DevOps",
-            icon: FaCode,
-            skills: ["Git", "Docker", "AWS", "Vercel", "Linux", "CI/CD"],
+            title: "Databases",
+            icon: FaDatabase,
+            skills: ["MongoDB", "PostgreSQL", "SQLite", "Redis"],
+            color: "text-orange-400"
+        },
+        {
+            title: "Cloud & DevOps",
+            icon: RiCloudLine,
+            skills: ["AWS", "Vercel", "GitHub Actions", "Docker", "Linux", "Git"],
             color: "text-purple-400"
         }
     ];
@@ -160,7 +172,7 @@ const SkillsSection = ({ isVisible }) => {
                 <div className="h-[2px] w-32 bg-[#C778DD]"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skillCategories.map((category, index) => {
                     const IconComponent = category.icon;
                     return (
@@ -184,7 +196,8 @@ const SkillCard = ({ title, icon: IconComponent, skills, color, delay }) => {
 
     return (
         <div
-            className={`group cursor-pointer transform transition-all duration-700 delay-${delay} hover:-translate-y-2`}
+            className="group cursor-pointer transform transition-all duration-700 hover:-translate-y-2"
+            style={{ transitionDelay: `${delay}ms` }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -202,8 +215,9 @@ const SkillCard = ({ title, icon: IconComponent, skills, color, delay }) => {
                     {skills.map((skill, index) => (
                         <div
                             key={skill}
-                            className={`text-[#ABB2BF] text-sm py-1 transition-all duration-300 delay-${index * 50} ${isHovered ? 'text-white transform translate-x-2' : ''
+                            className={`text-[#ABB2BF] text-sm py-1 transition-all duration-300 ${isHovered ? 'text-white transform translate-x-2' : ''
                                 }`}
+                            style={{ transitionDelay: `${index * 50}ms` }}
                         >
                             • {skill}
                         </div>
@@ -253,7 +267,8 @@ const FunFactsSection = ({ isVisible }) => {
                     return (
                         <div
                             key={fact.title}
-                            className={`group p-6 border-2 border-[#ABB2BF] rounded-lg hover:border-[#C778DD] transition-all duration-300 hover:shadow-lg hover:shadow-[#C778DD]/20 cursor-pointer transform hover:-translate-y-1 delay-${index * 100}`}
+                            className="group p-6 border-2 border-[#ABB2BF] rounded-lg hover:border-[#C778DD] transition-all duration-300 hover:shadow-lg hover:shadow-[#C778DD]/20 cursor-pointer transform hover:-translate-y-1"
+                            style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             <div className="flex items-start space-x-4">
                                 <div className={`p-3 bg-[#282C33] border border-[#ABB2BF] rounded-lg group-hover:border-[#C778DD] transition-colors duration-300`}>

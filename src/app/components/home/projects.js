@@ -37,6 +37,15 @@ export const Projects = () => {
             techStack:["NEXT.JS","TAILWINDCSS"],
             liveLink: "https://www.mat-in.org/",
             cachedLink: "https://github.com/muhammadtanko/mat-in",
+        },
+        {
+            id: 4,
+            title: "Zuka Cash",
+            description: "A WhatsApp-based fintech platform that lets users register and make transactions directly through chat",
+            image: "/images/banner.jpg",
+            techStack: ["NODE.JS", "WHATSAPP API", "MongoDB"],
+            liveLink: null,
+            cachedLink: null,
         }
     ];
 
@@ -157,28 +166,36 @@ export const ProjectCard = ({ project }) => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-4">
-                    <a
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`px-4 py-2 border-2 border-[#C778DD] text-white font-medium transition-all duration-300 transform ${isHovered
-                            ? "bg-[#C778DD] bg-opacity-20 scale-105 shadow-lg shadow-[#C778DD]/30"
-                            : "hover:bg-[#C778DD] hover:bg-opacity-10"
-                            }`}
-                    >
-                        Live &lt;~~&gt;
-                    </a>
-                    <a
-                        href={project.cachedLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`px-4 py-2 border-2 border-[#ABB2BF] text-white font-medium transition-all duration-300 transform hover:border-[#C778DD] hover:scale-105 ${isHovered ? "border-[#C778DD]" : ""
-                            }`}
-                    >
-                        Code &ge;
-                    </a>
-                </div>
+                {(project.liveLink || project.cachedLink) ? (
+                    <div className="flex gap-4">
+                        {project.liveLink && (
+                            <a
+                                href={project.liveLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`px-4 py-2 border-2 border-[#C778DD] text-white font-medium transition-all duration-300 transform ${isHovered
+                                    ? "bg-[#C778DD] bg-opacity-20 scale-105 shadow-lg shadow-[#C778DD]/30"
+                                    : "hover:bg-[#C778DD] hover:bg-opacity-10"
+                                    }`}
+                            >
+                                Live &lt;~~&gt;
+                            </a>
+                        )}
+                        {project.cachedLink && (
+                            <a
+                                href={project.cachedLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`px-4 py-2 border-2 border-[#ABB2BF] text-white font-medium transition-all duration-300 transform hover:border-[#C778DD] hover:scale-105 ${isHovered ? "border-[#C778DD]" : ""
+                                    }`}
+                            >
+                                Code &ge;
+                            </a>
+                        )}
+                    </div>
+                ) : (
+                    <div className="text-[#ABB2BF] text-sm italic">Private project</div>
+                )}
             </div>
 
             {/* Animated corner accent */}

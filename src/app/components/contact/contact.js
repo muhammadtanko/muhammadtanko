@@ -32,7 +32,7 @@ export const Contact = () => {
         {
             icon: FaWhatsapp,
             title: "WhatsApp",
-            value: "+234 8020763993",
+            value: "+234 8020763992",
             description: "For urgent matters",
             color: "text-green-400",
             bgColor: "bg-green-500"
@@ -74,7 +74,8 @@ export const Contact = () => {
                             return (
                                 <div
                                     key={method.title}
-                                    className={`group p-4 border-2 border-[#ABB2BF] rounded-lg hover:border-[#C778DD] transition-all duration-300 hover:shadow-lg hover:shadow-[#C778DD]/20 cursor-pointer transform hover:-translate-y-1 delay-${index * 100}`}
+                                    className="group p-4 border-2 border-[#ABB2BF] rounded-lg hover:border-[#C778DD] transition-all duration-300 hover:shadow-lg hover:shadow-[#C778DD]/20 cursor-pointer transform hover:-translate-y-1"
+                                    style={{ transitionDelay: `${index * 100}ms` }}
                                 >
                                     <div className="flex items-center space-x-4">
                                         <div className={`p-3 ${method.bgColor} bg-opacity-20 rounded-lg group-hover:bg-opacity-30 transition-all duration-300`}>

@@ -16,20 +16,20 @@ export const Skills = () => {
             skills: ["JavaScript", "TypeScript"]
         },
         {
+            title: "Frontend & Mobile",
+            skills: ["React", "Next.js", "Tailwind CSS"]
+        },
+        {
+            title: "Backend",
+            skills: ["Node.js", "Express", "GraphQL", "Prisma"]
+        },
+        {
             title: "Databases",
-            skills: ["MongoDB", "PostgreSQL", "SQLite"]
-        },
-        {
-            title: "Tools",
-            skills: ["VSCode", "Linux", "Docker", "Prisma"]
-        },
-        {
-            title: "Frameworks",
-            skills: ["React", "Next.js", "Node.js", "Express"]
+            skills: ["MongoDB", "PostgreSQL", "SQLite", "Redis"]
         },
         {
             title: "Cloud & DevOps",
-            skills: ["AWS", "Vercel", "GitHub Actions"]
+            skills: ["AWS", "Vercel", "GitHub Actions", "Docker", "Linux", "Git"]
         }
     ];
 
@@ -73,7 +73,7 @@ export const Skills = () => {
                     {skillCategories.map((category, index) => (
                         <div
                             key={category.title}
-                            className={`group transform transition-all duration-700 delay-${100 * (index + 1)} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                            className={`group transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                                 }`}
                             style={{
                                 transitionDelay: `${100 * (index + 1)}ms`
@@ -138,7 +138,7 @@ const SkillCard = ({ title, skills }) => {
                     {skills.map((skill, index) => (
                         <span
                             key={skill}
-                            className={`text-[#ABB2BF] text-sm px-2 py-1 rounded transition-all duration-300 delay-${index * 50} transform ${isHovered
+                            className={`text-[#ABB2BF] text-sm px-2 py-1 rounded transition-all duration-300 transform ${isHovered
                                 ? 'text-white bg-[#C778DD] bg-opacity-20 scale-105'
                                 : 'hover:text-white'
                                 }`}

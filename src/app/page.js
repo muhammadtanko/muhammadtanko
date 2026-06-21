@@ -4,7 +4,6 @@ import { Quote } from "@comp/home/quote";
 import { Projects } from "@comp/home/projects";
 import { Skills } from "@comp/home/skills";
 import { AboutMe } from "@comp/home/about-me";
-import { Contacts } from "@comp/home/contacts";
 import { Footer } from "@comp/global/footer";
 export default function Home() {
   return (
@@ -18,8 +17,6 @@ export default function Home() {
       <Projects />
       <Skills />
       <AboutMe />
-      <Contacts />
-      {/* <div className="mt-10 w-full h-[2px] border-2 border-gray"></div> */}
       <Footer />
     </div>
 
