@@ -10,6 +10,36 @@ export const Projects = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    const projects = [
+        {
+            id: 1,
+            title: "Alumni Management System",
+            description: "A software solution for managing alumni data, events, and communications",
+            image: "/images/alumni.png",
+            techStack: ["REACT", "REDUX TOOLKIT", "TAILWINDCSS", "NODE.JS", "MongoDB"],
+            liveLink: "https://alumni-ruby.vercel.app/",
+            cachedLink: "https://github.com/muhammadtanko/alumni_frontend",
+        },
+        {
+            id: 2,
+            title: "Leen Charity Website",
+            description: "A charity organization website to facilitate donations and showcase projects",
+            image: "/images/leen.png",
+            techStack: ["NEXT.JS","TAILWINDCSS"],
+            liveLink: "https://leen-charity.vercel.app/",
+            cachedLink: "https://github.com/muhammadtanko/leen_charity",
+        },
+        {
+            id: 3,
+            title: "Maternal Health organization",
+            description: "A platform dedicated to improving maternal health through resources and community support",
+            image: "/images/mat-in.png",
+            techStack:["NEXT.JS","TAILWINDCSS"],
+            liveLink: "https://www.mat-in.org/",
+            cachedLink: "https://github.com/muhammadtanko/mat-in",
+        }
+    ];
+
     return (
         <div className="mt-10 px-4 md:px-0">
             {/* Header Section */}
@@ -30,16 +60,16 @@ export const Projects = () => {
 
             {/* Projects Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {[1, 2, 3].map((_, index) => (
+                {projects.map((project, index) => (
                     <div
-                        key={index}
+                        key={project.id}
                         className={`transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                             }`}
                         style={{
                             transitionDelay: `${300 * (index + 1)}ms`
                         }}
                     >
-                        <ProjectCard />
+                        <ProjectCard project={project} />
                     </div>
                 ))}
             </div>
@@ -56,18 +86,8 @@ export const Projects = () => {
 
 
 
-export const ProjectCard = () => {
+export const ProjectCard = ({ project }) => {
     const [isHovered, setIsHovered] = useState(false);
-
-    const project = {
-        title: "ChertNodes",
-        description:
-            "Minecraft servers hosting platform with modern UI and powerful backend infrastructure",
-        image: "/images/banner.jpg",
-        techStack: ["REACT", "REDUX", "TAILWINDCSS", "NODE.JS", "MongoDB"],
-        liveLink: "https://example.com", // Replace with your live project link
-        cachedLink: "https://github.com/yourusername/chertnodes", // Replace with your repo link
-    };
 
     return (
         <div
@@ -77,7 +97,12 @@ export const ProjectCard = () => {
         >
             {/* Project Image */}
             <div
-                className="relative h-48 border-b-2 border-[#ABB2BF] bg-cover bg-center overflow-hidden group-hover:border-[#C778DD] transition-colors duration-500"
+                className="relative h-48 sm:h-60 md:h-72 lg:h-80 
+             border-b-2 border-[#ABB2BF] 
+             bg-contain bg-no-repeat bg-center 
+             overflow-hidden 
+             group-hover:border-[#C778DD] 
+             transition-colors duration-500"
                 style={{ backgroundImage: `url(${project.image})` }}
             >
                 {/* Overlay on hover */}
@@ -89,8 +114,8 @@ export const ProjectCard = () => {
                 {/* Live Demo Badge */}
                 <div
                     className={`absolute top-4 right-4 px-3 py-1 bg-[#C778DD] text-white text-xs font-medium rounded transform transition-all duration-300 ${isHovered
-                            ? "translate-y-0 opacity-100"
-                            : "-translate-y-2 opacity-0"
+                        ? "translate-y-0 opacity-100"
+                        : "-translate-y-2 opacity-0"
                         }`}
                 >
                     LIVE
@@ -104,8 +129,8 @@ export const ProjectCard = () => {
                         <span
                             key={tech}
                             className={`text-[#ABB2BF] font-normal text-xs px-2 py-1 rounded transition-all duration-300 ${isHovered
-                                    ? "text-white bg-[#C778DD] bg-opacity-20"
-                                    : "hover:text-white"
+                                ? "text-white bg-[#C778DD] bg-opacity-20"
+                                : "hover:text-white"
                                 }`}
                             style={{
                                 transitionDelay: isHovered
@@ -138,8 +163,8 @@ export const ProjectCard = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`px-4 py-2 border-2 border-[#C778DD] text-white font-medium transition-all duration-300 transform ${isHovered
-                                ? "bg-[#C778DD] bg-opacity-20 scale-105 shadow-lg shadow-[#C778DD]/30"
-                                : "hover:bg-[#C778DD] hover:bg-opacity-10"
+                            ? "bg-[#C778DD] bg-opacity-20 scale-105 shadow-lg shadow-[#C778DD]/30"
+                            : "hover:bg-[#C778DD] hover:bg-opacity-10"
                             }`}
                     >
                         Live &lt;~~&gt;
@@ -151,7 +176,7 @@ export const ProjectCard = () => {
                         className={`px-4 py-2 border-2 border-[#ABB2BF] text-white font-medium transition-all duration-300 transform hover:border-[#C778DD] hover:scale-105 ${isHovered ? "border-[#C778DD]" : ""
                             }`}
                     >
-                        Cached &ge;
+                        Code &ge;
                     </a>
                 </div>
             </div>
@@ -159,11 +184,10 @@ export const ProjectCard = () => {
             {/* Animated corner accent */}
             <div
                 className={`absolute top-0 left-0 w-0 h-0 border-l-4 border-t-4 border-transparent transition-all duration-500 ${isHovered
-                        ? "border-l-[#C778DD] border-t-[#C778DD] w-8 h-8"
-                        : ""
+                    ? "border-l-[#C778DD] border-t-[#C778DD] w-8 h-8"
+                    : ""
                     }`}
             ></div>
         </div>
     );
 };
-
