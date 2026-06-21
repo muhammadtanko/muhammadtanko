@@ -42,7 +42,7 @@ export const Projects = () => {
             id: 4,
             title: "Zuka Cash",
             description: "A WhatsApp-based fintech platform that lets users register and make transactions directly through chat",
-            image: "/images/banner.jpg",
+            image: "/images/zuka.png",
             techStack: ["NODE.JS", "WHATSAPP API", "MongoDB"],
             liveLink: null,
             cachedLink: null,

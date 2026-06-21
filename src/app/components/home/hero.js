@@ -138,7 +138,7 @@ export const Hero = () => {
                 <div className={`flex gap-3 p-3 border-2 border-[#ABB2BF] mt-4 bg-[#282C33] transform transition-all duration-700 delay-1000 hover:border-[#C778DD] hover:shadow-lg hover:shadow-[#C778DD]/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
                     <div className="w-4 h-4 bg-[#C778DD] mt-1.5 animate-pulse"></div>
-                    <div className="text-[#ABB2BF]">Currently working on Portfolio</div>
+                    <div className="text-[#ABB2BF]">Currently working on the next big idea</div>
                 </div>
             </div>
 
