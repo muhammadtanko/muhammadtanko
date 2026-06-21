@@ -4,35 +4,9 @@ import { Footer } from "@comp/global/footer";
 import { useState, useEffect } from 'react';
 
 const projects = [
+    
     {
         id: 1,
-        title: "Alumni Management System",
-        description: "A software solution for managing alumni data, events, and communications",
-        image: "/images/alumni.png",
-        techStack: ["REACT", "REDUX TOOLKIT", "TAILWINDCSS", "NODE.JS", "MongoDB"],
-        liveLink: "https://alumni-ruby.vercel.app/",
-        code: "https://github.com/muhammadtanko/alumni_frontend",
-    },
-    {
-        id: 2,
-        title: "Leen Charity Website",
-        description: "A charity organization website to facilitate donations and showcase projects",
-        image: "/images/leen.png",
-        techStack: ["NEXT.JS", "TAILWINDCSS"],
-        liveLink: "https://leen-charity.vercel.app/",
-        code: "https://github.com/muhammadtanko/leen_charity",
-    },
-    {
-        id: 3,
-        title: "Maternal Health organization",
-        description: "A platform dedicated to improving maternal health through resources and community support",
-        image: "/images/mat-in.png",
-        techStack: ["NEXT.JS", "TAILWINDCSS"],
-        liveLink: "https://www.mat-in.org/",
-        code: "https://github.com/muhammadtanko/mat-in",
-    },
-    {
-        id: 4,
         title: "Kaduna State Contributory health Management Authority",
         description: "A health management platform for Kaduna State, providing information and services related to healthcare contributions",
         image: "/images/kadchma.png",
@@ -41,7 +15,7 @@ const projects = [
         code: "https://github.com/muhammadtanko/project4",
     },
     {
-        id: 5,
+        id: 2,
         title: "Al-ihsan website",
         description: "",
         image: "/images/al-ihsan.png",
@@ -50,13 +24,40 @@ const projects = [
         code: "http://github.com/muhammadtanko/al-ihsan"
     },
     {
-        id: 6,
+        id: 3,
         title: "Zuka Cash",
         description: "A WhatsApp-based fintech platform that lets users register and make transactions directly through chat",
         image: "/images/zuka.png",
         techStack: ["NODE.JS", "WHATSAPP API", "MongoDB"],
         liveLink: "https://zuka-solutions.com/",
         code: null
+    },
+    {
+        id: 4,
+        title: "Alumni Management System",
+        description: "A software solution for managing alumni data, events, and communications",
+        image: "/images/alumni.png",
+        techStack: ["REACT", "REDUX TOOLKIT", "TAILWINDCSS", "NODE.JS", "MongoDB"],
+        liveLink: "https://alumni-ruby.vercel.app/",
+        code: "https://github.com/muhammadtanko/alumni_frontend",
+    },
+    {
+        id: 5,
+        title: "Leen Charity Website",
+        description: "A charity organization website to facilitate donations and showcase projects",
+        image: "/images/leen.png",
+        techStack: ["NEXT.JS", "TAILWINDCSS"],
+        liveLink: "https://leen-charity.vercel.app/",
+        code: "https://github.com/muhammadtanko/leen_charity",
+    },
+    {
+        id: 6,
+        title: "Maternal Health organization",
+        description: "A platform dedicated to improving maternal health through resources and community support",
+        image: "/images/mat-in.png",
+        techStack: ["NEXT.JS", "TAILWINDCSS"],
+        liveLink: "https://www.mat-in.org/",
+        code: "https://github.com/muhammadtanko/mat-in",
     }
 ];
 

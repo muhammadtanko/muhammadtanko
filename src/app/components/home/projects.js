@@ -19,34 +19,33 @@ export const Projects = () => {
             techStack: ["REACT", "REDUX TOOLKIT", "TAILWINDCSS", "NODE.JS", "MongoDB"],
             liveLink: "https://alumni-ruby.vercel.app/",
             cachedLink: "https://github.com/muhammadtanko/alumni_frontend",
-        },
-        {
+        }, {
             id: 2,
-            title: "Leen Charity Website",
-            description: "A charity organization website to facilitate donations and showcase projects",
-            image: "/images/leen.png",
-            techStack: ["NEXT.JS","TAILWINDCSS"],
-            liveLink: "https://leen-charity.vercel.app/",
-            cachedLink: "https://github.com/muhammadtanko/leen_charity",
-        },
-        {
-            id: 3,
             title: "Maternal Health organization",
             description: "A platform dedicated to improving maternal health through resources and community support",
             image: "/images/mat-in.png",
-            techStack:["NEXT.JS","TAILWINDCSS"],
+            techStack: ["NEXT.JS", "TAILWINDCSS"],
             liveLink: "https://www.mat-in.org/",
             cachedLink: "https://github.com/muhammadtanko/mat-in",
         },
         {
-            id: 4,
+            id: 3,
             title: "Zuka Cash",
             description: "A WhatsApp-based fintech platform that lets users register and make transactions directly through chat",
             image: "/images/zuka.png",
             techStack: ["NODE.JS", "WHATSAPP API", "MongoDB"],
             liveLink: null,
             cachedLink: null,
-        }
+        }  // {
+        //     id: 3,
+        //     title: "Leen Charity Website",
+        //     description: "A charity organization website to facilitate donations and showcase projects",
+        //     image: "/images/leen.png",
+        //     techStack: ["NEXT.JS","TAILWINDCSS"],
+        //     liveLink: "https://leen-charity.vercel.app/",
+        //     cachedLink: "https://github.com/muhammadtanko/leen_charity",
+        // },
+
     ];
 
     return (
